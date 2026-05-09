@@ -4,13 +4,12 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        str = ""
-        word = s.split()
+        result = []
+        word = s.split()                 # tách thành các từ (mặc định " ")
         for i in range(len(word)):
-            rev = word[i][::-1]
-            str += rev
-            str = str + " "
-        return  str
+            rev = word[i][::-1]          # đảo ngược các từ 
+            result.append(rev)
+        return " ".join(result)          # thêm vào và cách nhau bằng " "
 def main():
     sol = Solution()
     s = "Let's take LeetCode contest"
