@@ -5,14 +5,12 @@ class Solution(object):
         :rtype: int
         """
         nums.sort()
-        if nums[0] < 0 and nums[1] < 0 :
-            if (nums[0] * nums[1]) < (nums[len(nums) - 1] * nums[len(nums) -2]):
-                return  (nums[len(nums) - 1] * nums[len(nums) - 2] * nums[len(nums) - 3])
-            else :
-                return nums[0] * nums[1] * nums[len(nums) - 1]
-            
-        result = nums[-1] * nums[-2] * nums[-3]
-        return result
+
+        product1 = nums[-1] * nums[-2] * nums[-3]
+
+        product2 = nums[0] * nums[1] * nums[-1]
+
+        return max(product1, product2)
 
 def main():
     sol = Solution()

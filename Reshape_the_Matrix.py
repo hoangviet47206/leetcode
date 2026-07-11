@@ -17,7 +17,7 @@ class Solution(object):
               nums.append(mat[i][j])
 
         result = []
-        inx = 0;
+        inx = 0
         for i in range(r):
             rev = []
             for j in range(c):

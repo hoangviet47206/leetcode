@@ -15,6 +15,11 @@ class Solution(object):
             (-1, 1),
             (0, 0)
         ]
+        
+        rows = len(img)
+        cols = len(img[0])
+
+        result = [[0] * cols for _ in range(rows)]
 
         for i in range(len(img)):
             for j in range(len(img[0])):
@@ -27,8 +32,8 @@ class Solution(object):
                     if 0 <= ni < len(img) and 0 <= nj < len(img[0]):
                         sum += img[ni][nj]
                         dem += 1
-                img[i][j] = sum // dem
-        return img
+                result[i][j] = sum // dem
+        return result  # result
 def main():
     sol = Solution()
     img = [[100,200,100],[200,50,200],[100,200,100]]
