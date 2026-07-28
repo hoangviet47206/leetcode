@@ -12,11 +12,6 @@ class Solution(object):
                 l += 1
 
         return l
-
-
-
-
-
 def main():
     sol = Solution()
     s = "Hello, my name is John"
