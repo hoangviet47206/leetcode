@@ -5,9 +5,11 @@ class Solution(object):
         :rtype: int
         """
         day_of_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-        
+
         s = date.split('-')
         year, month, day = (int(s[0]), int(s[1]), int(s[2]))
+        if(self.is_leap_year(year) == True): day_of_month[2] += 1
+
         if (month < 2): return day
 
         result = 0
@@ -18,10 +20,6 @@ class Solution(object):
 
         return result
            
-
-        
-
-        
     def is_leap_year(year):
      if year % 400 == 0:
         return True
