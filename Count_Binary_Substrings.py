@@ -14,8 +14,6 @@ class Solution(object):
                 my_list.append(tmp)
                 tmp = 1
         my_list.append(tmp)
-        for i in my_list:
-            print(i)
         result = 0
         for i in range(1, len(my_list)):
             result = result + min(my_list[i - 1], my_list[i])
