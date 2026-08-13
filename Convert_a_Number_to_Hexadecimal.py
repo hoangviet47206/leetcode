@@ -4,6 +4,7 @@ class Solution(object):
         :type num: int
         :rtype: str
         """
+        if num == 0: return ""
         num = num if num >= 0 else num + 2**32
         hexa = "0123456789abcdef"
         result = ""

@@ -9,10 +9,7 @@ class Solution(object):
         """
         check = image[sr - 1][sc - 1]
         for i in range(sr - 1, len(image)):
-            for j in range(sc - 1, 
-                           
-                           
-                           len(image[0])):
+            for j in range(sc - 1, len(image[0])):
                 if check == image[i][j] :
                     image[i][j] = color
                 else:
