@@ -26,7 +26,7 @@ This repository contains my solutions to problems on LeetCode using Python.
 ## 📈 Progress
 
 * Easy: ✅
-* Medium: ⏳
+* Medium: ✅
 * Hard: ⏳
 
 ---
