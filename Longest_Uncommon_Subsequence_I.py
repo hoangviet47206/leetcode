@@ -5,7 +5,9 @@ class Solution(object):
         :type b: str
         :rtype: int
         """
-        return max(self.diffchar(a, b), self.diffchar(b, a))
+        tmp = max(self.diffchar(a, b), self.diffchar(b, a))
+        
+        return -1 if tmp == 0 else tmp
     def diffchar(self, a, b):
         dem = 0
         for i in a:

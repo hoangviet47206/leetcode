@@ -6,11 +6,15 @@ class Solution(object):
         :rtype: int
         """
         area = 0
-        a = len(height)
-        for i in range(0, a):
-            for j in range(i + 1, a):
-                areax = (j - i) * min(height[i], height[j])
-                if (areax > area): area = areax
+        left, right = 0, len(height) - 1
+        
+        while left < right:
+            areax = (right - left) * min(height(left), height[right])
+            if height[left] < height[right]:
+                left = left + 1
+            else:
+                right = right - 1
+            area = max(area, areax)
         
         return area
 def main():
